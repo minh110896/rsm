@@ -12,6 +12,7 @@ $(document).on('click', '#cancel_user_edit', function(){
   $('#edit_user_'+user_id).remove();
   $('#show-user').show(1000);
 });
+>>>>>>> create-delete-certificate
 $(document).on('click', '#cancel_club_new', function(){
   $('#new_club').remove();
   $('#btn-add-club').show();
