@@ -17,4 +17,5 @@
  *= require bootstrap-datepicker
  *= require_tree .
  *= require_self
+ *= require form_tag
  */

@@ -1,0 +1,51 @@
+<div class="job-form">
+  <%= form_for @job, id: "job_form", remote: true do |f| %>
+    <%= f.hidden_field :company_id, value: params[:id] %>
+
+    <%= f.label :name, t(".job_name"), class: "job-create-name" %>
+    <%= f.text_field :name, class: "form-control job-create-name" %>
+    <span id="errorBlock" class="has-error">
+      <%= @job.errors.messages[:name][0] %>
+    </span>
+
+    <%= f.label :description, t(".description") %>
+    <%= f.text_area :description, class: "form-control" %>
+    <span id="errorBlock" class="has-error">
+      <%= @job.errors.messages[:description][0] %>
+    </span>
+
+    <%= f.label :language, t(".language") %>
+    <%= f.text_field :language, class: "form-control" %>
+    <span id="errorBlock" class="has-error">
+      <%= @job.errors.messages[:language][0] %>
+    </span>
+
+    <%= f.label :position %>
+    <%= f.text_field :position, class: "form-control" %>
+    <span id="errorBlock" class="has-error">
+      <%= @job.errors.messages[:position][0] %>
+    </span>
+
+    <%= f.label :level, t(".level") %>
+    <%= f.text_field :level, class: "form-control" %>
+    <span id="errorBlock" class="has-error">
+      <%= @job.errors.messages[:level][0] %>
+    </span>
+
+    <%= f.label :skill, t(".skill") %>
+    <%= f.text_field :skill, class: "form-control" %>
+    <span id="errorBlock" class="has-error">
+      <%= @job.errors.messages[:skill][0] %>
+    </span>
+
+    <%= f.label :content, t(".content") %>
+    <%= f.text_area :content, class: "form-control job-create-content" %>
+    <span id="errorBlock" class="has-error">
+      <%= @job.errors.messages[:content][0] %>
+    </span>
+
+    <div class=" centerize create-job-btn ">
+      <%= f.submit t("jobs.form.save_job"), class: "btn btn-primary" %>
+    </div>
+  <% end %>
+</div>

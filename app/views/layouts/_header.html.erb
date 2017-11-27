@@ -32,8 +32,14 @@
         </li>
         <% if user_signed_in? %>
           <li>
-            <a href="about.html"><%= t "index.home" %></a>
+            <%= link_to current_user.name, edit_user_registration_path(current_user) %>
             <ul>
+              <li>
+                <%= link_to apply_path(current_user) do %>
+                  <%= t "users.new.job" %>
+                  <i class="fa fa-user fa-fw pull-right"></i>
+                <% end %>
+              </li>
               <li>
                 <%= link_to user_path(current_user) do %>
                   <%= t "users.new.profile" %>
@@ -57,7 +63,7 @@
 </header>
 <section class="site-section site-section-light site-section-top themed-background-dark">
   <div class="container">
-    <h1 class="animation-slideDown"><strong><%= t "index.latest" %></strong></h1>
-    <h2 class="h3 animation-slideUp"><%= t "index.home" %></h2>
+    <h1 class="animation-slideDown"><strong><%= header_title(yield(:page_title)) %></strong></h1>
+    <h2 class="h3 animation-slideUp"><%= header_title(yield(:page_sub_title)) %></h2>
   </div>
 </section>

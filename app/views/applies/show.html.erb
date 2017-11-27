@@ -1,0 +1,24 @@
+<body>
+<main>
+<div class="container">
+  <input id="tab1" type="radio" name="tabs" checked>
+  <label for="tab1">Bookmark_job</label>
+
+  <input id="tab2" type="radio" name="tabs">
+  <label for="tab2">Applied_job</label>
+
+  <section id="content1">
+    <p>
+      Bacon ipsum dolor sit amet beef venison beef ribs kielbasa. Sausage pig leberkas, t-bone sirloin shoulder bresaola. Frankfurter rump porchetta ham. Pork belly prosciutto brisket meatloaf short ribs.
+    </p>
+    <p>
+      Brisket meatball turkey short loin boudin leberkas meatloaf chuck andouille pork loin pastrami spare ribs pancetta rump. Frankfurter corned beef beef tenderloin short loin meatloaf swine ground round venison.ss
+    </p>
+  </section>
+
+  <section id="content2">
+    <%= render partial: "apply", collection: @applies %>
+  </section>
+  </div>
+</main>
+</body>

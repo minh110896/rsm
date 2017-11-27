@@ -20,5 +20,7 @@ Rails.application.routes.draw do
   resources :users
   resources :achievements
   resources :certificates, except: :index
+  resources :jobs
+  resources :applies
 end
 

@@ -14,3 +14,8 @@ certificate:
 certificate_cancel:
   edit: "cancel_certificate_edit"
   new: "cancel_certificate_new"
+paginate:
+  jobs_perpage: 5
+jobs:
+  description:
+    maximum_length: 255

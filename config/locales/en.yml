@@ -1,5 +1,3 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
 # than English, add the necessary files in this directory.
 #
 # To use the locales, use `I18n.t`:
@@ -48,6 +46,7 @@ en:
   job_demo_time: "14/11/2017"
   detail: "Details"
   account: "Edit"
+  company: "Company"
   can_not_find_company: "can not find company !"
   optional: "(Optional)"
   save: "Save"
@@ -57,6 +56,34 @@ en:
   banner_edit: "banner_edit"
   banner_show: "banner_show"
   company: "Company"
+  sure?: "Are you sure to make this?"
+  test: "This is test paragraph!"
+  virtual_employer: "Virtual Employer"
+  view: "View"
+  home: "Home"
+  lastest: "Lastest"
+  activerecord:
+    attributes:
+      user:
+        email: "E-mail address"
+    errors:
+      models:
+        job:
+          attributes:
+            name:
+              blank: "Job's title is required"
+            description:
+              blank: "Description can not be blank"
+            content:
+              blank: "Content cannot be blank."
+            level:
+              blank: "Level cannot be blank."
+            language:
+              blank: "Language cannot be blank."
+            skill:
+              blank: "Skill cannot be blank."
+            position:
+              blank: "Position cannot be blank."
   mailer:
     hi: "Hi "
     thank: " Thanks for used my service"
@@ -191,3 +218,51 @@ en:
     plcmajor: "Software Engineering"
     plcorganization: "123 Liverpool, United Kingdom"
     plcclass: "Good"
+    show:
+      post_job: "Post Job"
+      jobs: "Jobs"
+      no_jobs: "There is no jobs available at this time"
+      close: "Close"
+    form:
+      job_name: "Job title"
+      description: "Description"
+      language: "Required Language"
+      position: "Position"
+      skill: "Required Skills"
+      content: "Job Detail"
+      level: "Required Level"
+  jobs:
+    form:
+      save_job: "Save Job"
+    update:
+      updated: "Job has been updated."
+      cant_update: "Can not be updated."
+    destroy:
+      destroyed: "Job has been destroyed."
+      cant_destroy: "Can not be destroyed"
+    show:
+      job_description: "Job Decription"
+      job_detail: "Job Detail"
+      job_requirement: "Job Requirement"
+      level_requirement: "Level Requirement"
+      job_category: "Job Category"
+      language: "Preferred Language"
+      position: "Position"
+      skills: "Skills"
+      posted_day: "Posted day"
+      at: "at"
+      apply_now: "Apply Now"
+      save_job: "Save Job"
+      job_info: "Job Information"
+      info: "Info"
+      company_info: "Company Info"
+      company_jobs: "Jobs From This Company"
+      company: "Company"
+      jobs: "Jobs"
+    method:
+      cant_find_job: "Job can not be found"
+      cant_find_employer: "Employer can not be found"
+      cant_find_company: "Company can not be found"
+    create:
+      created: "Job has been created"
+      cant_create: "Job can not be created"

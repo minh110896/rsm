@@ -1,0 +1,25 @@
+<div class="res-table__row row animated">
+  <div class="col-md-1 logo text-center">
+    <%= image_tag(apply.job.company.logo, size: 50) %>
+  </div>
+  <div class="col-md-6 job-info">
+    <div class="name">
+      <%= link_to apply.job.name, job_path(apply.job.id) %>
+    </div>
+    <div class="text-strong"><%= apply.job.company.name %></div>
+  </div>
+  <div class="col-md-2 applied">
+    <div class="text-light" style="color: blue">
+      Position
+      <span class="hidden-md hidden-lg m-r-xs">:</span>
+    </div>
+    <div class="text-strong"><%= apply.job.position %></div>
+  </div>
+  <div class="col-md-2 applied">
+    <div class="text-light" style="color: blue">
+      Submit_Date
+      <span class="hidden-md hidden-lg m-r-xs">:</span>
+    </div>
+    <div class="text-strong"><%= apply.created_at.to_date %></div>
+  </div>
+</div>
