@@ -28,6 +28,8 @@ jobs:
   description:
     maximum_length: 255
 employers:
+apply:
+  image: 50
   page: 10
 bookmark:
   bookmarked: 0

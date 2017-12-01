@@ -8,7 +8,7 @@ class AchievementsController < ApplicationController
       if @achievement.save
         format.js{flash[:success] = t "achievements.create"}
       else
-        format.js{flash[:danger] = t "achievements.error"}
+        format.js
       end
     end
   end
@@ -18,7 +18,7 @@ class AchievementsController < ApplicationController
       if @achievement.update_attributes params_achievements
         format.js{flash[:success] = t "achievements.update_success"}
       else
-        format.js{flash[:danger] = t "achievements.can_not_update"}
+        format.js
       end
     end
   end

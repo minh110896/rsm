@@ -38,5 +38,8 @@ class Ability
     can :manage, Club, user_id: user.id
     can :manage, Achievement, user_id: user.id
     can :manage, Certificate, user_id: user.id
+    can :manage, Experience, user_id: user.id
+    can :manage, BookmarkLike, user_id: user.id
+    can :manage, Apply, user_id: user.id
   end
 end

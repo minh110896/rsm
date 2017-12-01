@@ -52,7 +52,8 @@ Member.create!(
   user_id: 1,
   position: "employer"
 )
-10.times do |i|
+
+100.times do |i|
   Job.create!(
     company_id: 1,
     user_id: 1,
@@ -65,5 +66,13 @@ Member.create!(
     skill: Faker::Job.key_skill,
     position: "Manager",
     description: Faker::Lorem.paragraphs
+)
+end
+
+20.times do |i|
+  Apply.create!(
+    status: 0,
+    user_id: 1,
+    job_id: 1 + i
 )
 end

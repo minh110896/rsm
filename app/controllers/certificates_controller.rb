@@ -11,7 +11,7 @@ class CertificatesController < ApplicationController
       if @certificate.save
         format.js{flash[:success] = t "certificate.success"}
       else
-        format.js{flash[:danger] = t "certificate.fail"}
+        format.js
       end
     end
   end
@@ -23,7 +23,7 @@ class CertificatesController < ApplicationController
       if @certificate.update_attributes params_certificate
         format.js{flash[:success] = t "certificate.success"}
       else
-        format.js{flash[:danger] = t "certificate.fail"}
+        format.js
       end
     end
   end
