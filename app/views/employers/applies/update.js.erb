@@ -1,0 +1,6 @@
+<% debugger %>
+<% if @apply.errors.any? %>
+  alertify.error('<%= j (render partial: "shared/error_messages", locals: {object: @apply}) %>');
+<% else %>
+  alertify.success('<%= flash[:success] %>');
+<% end %>

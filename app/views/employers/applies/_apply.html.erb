@@ -1,0 +1,39 @@
+<tr>
+  <td class="text-center"><strong><%= apply.id %></strong></a></td>
+  <td class="text-center"><strong><%= link_to apply.user.name, employers_user_path(apply.user.id) %></strong></td>
+  <td class="text-center"><strong><%= apply.user.email %></strong></td>
+  <td class="text-center"><strong><%= apply.user.phone %></strong></td>
+  <td class="text-center visible-lg"><%= apply.created_at %></td>
+  <td class="text-center hidden-xs">
+  <%= form_for([:employers, apply]) do |f| %>
+    <div>
+      <%= f.select :status, Apply.statuses.map{|key, value| [t("#{key}"), key]},
+        {}, onchange: "this.form.submit()" %>
+    </div>
+  <% end %>
+  </td>
+  <td class="text-center">
+    <%= link_to employers_apply_path(apply), method: :delete,
+      class: "fa fa-trash-o fa-2x", data: {confirm: (t "employers.apply.sure") } do %>
+    <% end %>
+  </td>
+</tr>
+<div class="create-job-modal">
+  <div class="modal fade" id="JobModal" role="dialog">
+    <div class="modal-dialog job-modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title"><%= t "post_job" %></h4>
+        </div>
+        <div class="modal-body cc" id="job-create-form">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">
+            <%= t ".close" %>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

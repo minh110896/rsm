@@ -1,0 +1,10 @@
+<tr>
+  <td class="text-center"><strong><%= job.id %></strong></a></td>
+  <td class="visible-lg"><%= link_to job.name, employers_apply_path(job) %></td>
+  <td class="text-center"><strong><%= job.position %></strong></td>
+  <td class="text-center">
+    <%= link_to employers_job_path(job), method: :delete,
+      class: "btn btn-xs btn-danger fa fa-times", data: {confirm: (t "employers.apply.sure") } do %>
+  <% end %>
+  </td>
+</tr>

@@ -375,6 +375,22 @@ en:
         delete: "Delete"
         add_member: "Add New Member"
         all_member: "All Members"
+    apply:
+      sure: "Are you sure ?"
+      applyfor: "Apply for"
+      id: "ID"
+      user: "User"
+      email: "Email"
+      phone: "Phone"
+      date: "Submit_Date"
+      status: "Status"
+      not_find: "Can not find"
+      destroysuc: "Destroy successful"
+      destroyfal: "Destroy fail"
+    job:
+      id: "ID"
+      jobname: "Job_Name"
+      position: "Position"
   bookmark_like:
     save: "Bookmarked"
     insert: "Bookmark"

@@ -26,6 +26,8 @@ class Ability
     end
     can :manage, Company, id: user.id
     can :manage, Member, id: user.id
+    can :manage, Job
+    can :manage, Apply, id: user.id
   end
 
   def permission_admin
